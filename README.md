@@ -1,6 +1,6 @@
 # Aaargh!
 
-A TPB parser, easier fetching the best torrents to download.
+*I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). Giving you the best torrent available for download.
 
 ### Install
 
@@ -10,7 +10,13 @@ cd aaargh
 npm install
 ```
 
+## Run tests
+
+```
+mocha
+```
+
 
 ## License
 
-Copyright under MIT license.
+Published under MIT license.
