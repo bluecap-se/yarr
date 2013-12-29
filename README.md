@@ -13,4 +13,4 @@ npm install
 
 ## License
 
-Copyright under GPL v2.
+Copyright under MIT license.
