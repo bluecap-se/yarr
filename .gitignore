@@ -11,7 +11,5 @@ pids
 logs
 results
 
-mocha
-
 npm-debug.log
 node_modules

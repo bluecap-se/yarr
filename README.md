@@ -1,6 +1,7 @@
 # Aaargh!
 
-*I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). Giving you the best torrent available for download.
+*I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
+for picking the best torrent available for download, by searching TPB.
 
 ### Install
 
@@ -13,7 +14,7 @@ npm install
 ## Run tests
 
 ```
-mocha
+make test
 ```
 
 
