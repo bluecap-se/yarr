@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>The Pirate Bay - The galaxy's most resilient bittorrent site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="google-site-verification" content="bERYeomIC5eBWlPLupPPYPYGA9GvAUKzFHh3WIw24Xs" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search The Pirate Bay" />
+    <link rel="stylesheet" type="text/css" href="/static/css-new/pirate6.css"/>
+    <style type="text/css">
+        .searchBox{
+            margin: 6px;
+            width: 300px;
+            vertical-align: middle;
+            padding: 2px;
+                background-image:url('/static/img/icon-https.gif');
+                background-repeat:no-repeat;
+                background-position: right;
+        }
+
+        .detLink {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        .detDesc {
+            color: #4e5456;
+        }
+        .detDesc a:hover {
+            color: #000099;
+            text-decoration: underline;
+        }
+        .sortby {
+            text-align: left;
+            float: left;
+        }
+        .detName {
+            padding-top: 3px;
+            padding-bottom: 2px;
+        }
+        .viewswitch {
+            font-style: normal;
+            float: right;
+            text-align: right;
+            font-weight: normal;
+        }
+    </style>
+    <script src="/static/js/tpb.js" type="text/javascript"></script>
+
+        <style type="text/css">
+        table#sponsoredLinks a { border: 0; }
+        table#sponsoredLinks a:hover { text-decoration: underline; }
+                table#sponsoredLinks td.downbut a {border: none;}
+                table#sponsoredLinks {min-width: 400px; text-align: left; width: 100%; margin: 0 0 10px 0; border-left: solid 1px #ffffff;}
+                table#sponsoredLinks th {padding: 7px; background-color: #D2B9A6;}
+        table#sponsoredLinks td {padding: 2px 4px; background-color: #F6F1EE; font-weight: bold; font-style: italic; text-align: right; white-space: nowrap;}
+                table#sponsoredLinks td img {border: 0;}
+                table#sponsoredLinks td.first {font-style: normal; text-align: left;}
+                table#sponsoredLinks td.first img {margin: 0 5px 0 0; vertical-align: -7px;}
+                table#sponsoredLinks tr:hover td {background-color: #FFFFFF;}
+                table#sponsoredLinks td.downbut {width: 170px;}
+        </style>
+
+    <script language="javascript" type="text/javascript">if (top.location != self.location) {top.location.replace(self.location);}</script>
+</head>
+
+<body>
+
+    <div id="header">
+            <form method="get" id="q" action="/s/">
+            <a href="/" class="img"><img src="/static/img/tpblogo_sm_ny.gif" id="TPBlogo" alt="The Pirate Bay" /></a>
+            <b><a href="/" title="Search Torrents">Search Torrents</a></b>&nbsp;&nbsp;|&nbsp;
+            <a href="/browse" title="Browse Torrents">Browse Torrents</a>&nbsp;&nbsp;|&nbsp;
+            <a href="/recent" title="Recent Torrent">Recent Torrents</a>&nbsp;&nbsp;|&nbsp;
+            <a href="/tv" title="TV shows">TV shows</a>&nbsp;&nbsp;|&nbsp;
+            <a href="/music" title="Music">Music</a>&nbsp;&nbsp;|&nbsp;
+            <a href="/top" title="Top 100">Top 100</a>
+            <br /><input type="search" class="inputbox" title="Pirate Search" name="q" placeholder="Search here..." value="big bang theory s01e01" /><input value="Pirate Search" type="submit" class="submitbutton" /><br />           <label for="audio" title="Audio"><input id="audio" name="audio" onclick="javascript:rmAll();" type="checkbox"/>Audio</label>
+            <label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox" checked="checked"/>Video</label>
+            <label for="apps" title="Applications"><input id="apps" name="apps" onclick="javascript:rmAll();" type="checkbox"/>Applications</label>
+            <label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox"/>Games</label>
+            <label for="other" title="Other"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox"/>Other</label>
+
+            <select id="category" name="category" onchange="javascript:setAll();">
+                        <option value="0">All</option>
+                <optgroup label="Audio">
+                    <option value="101">Music</option>
+                    <option value="102">Audio books</option>
+                    <option value="103">Sound clips</option>
+                    <option value="104">FLAC</option>
+                    <option value="199">Other</option>
+                </optgroup>
+                <optgroup label="Video">
+                    <option value="201">Movies</option>
+                    <option value="202">Movies DVDR</option>
+                    <option value="203">Music videos</option>
+                    <option value="204">Movie clips</option>
+                    <option value="205">TV shows</option>
+                    <option value="206">Handheld</option>
+                    <option value="207">HD - Movies</option>
+                    <option value="208">HD - TV shows</option>
+                    <option value="209">3D</option>
+                    <option value="299">Other</option>
+                </optgroup>
+                <optgroup label="Applications">
+                    <option value="301">Windows</option>
+                    <option value="302">Mac</option>
+                    <option value="303">UNIX</option>
+                    <option value="304">Handheld</option>
+                    <option value="305">IOS (iPad/iPhone)</option>
+                    <option value="306">Android</option>
+                    <option value="399">Other OS</option>
+                </optgroup>
+                <optgroup label="Games">
+                    <option value="401">PC</option>
+                    <option value="402">Mac</option>
+                    <option value="403">PSx</option>
+                    <option value="404">XBOX360</option>
+                    <option value="405">Wii</option>
+                    <option value="406">Handheld</option>
+                    <option value="407">IOS (iPad/iPhone)</option>
+                    <option value="408">Android</option>
+                    <option value="499">Other</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="601">E-books</option>
+                    <option value="602">Comics</option>
+                    <option value="603">Pictures</option>
+                    <option value="604">Covers</option>
+                    <option value="605">Physibles</option>
+                    <option value="699">Other</option>
+                </optgroup>
+            </select>
+
+            <input type="hidden" name="page" value="0" />
+            <input type="hidden" name="orderby" value="99" />
+        </form>
+    </div><!-- // div:header -->
+
+    <h2><span>Search results: big bang theory s01e01</span>&nbsp;Displaying hits from 1 to 14 (approx 14 found)</h2>
+<div id="SearchResults"><div id="content">
+            <div id="sky-right">
+            </div>
+    <div id="main-content">
+
+    <table id="searchResult"><thead id="tableHead"><tr class="header"><th><a href="/search/big%20bang%20theory%20s01e01/0/13/200" title="Order by Type">Type</a></th>           <th><div class="sortby"><a href="/search/big%20bang%20theory%20s01e01/0/1/200" title="Order by Name">Name</a></div><div class="viewswitch"> View: Single / <a href="/switchview.php?view=d">Double</a>&nbsp;</div></th>
+<th><a href="/search/big%20bang%20theory%20s01e01/0/3/200" title="Order by Uploaded">Uploaded</a></th><th>&nbsp;</th><th><a href="/search/big%20bang%20theory%20s01e01/0/5/200" title="Order by Size">Size</a></th><th><abbr title="Seeders"><a href="/search/big%20bang%20theory%20s01e01/0/8/200" title="Order by Seeders">SE</a></abbr></th><th><abbr title="Leechers"><a href="/search/big%20bang%20theory%20s01e01/0/9/200" title="Order by Leechers">LE</a></abbr></th></tr></thead><tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/3754260/The.Big.Bang.Theory.S01E01.PREAIR.DVDRip.XviD-CRX_-_CT_-" title="Details for The.Big.Bang.Theory.S01E01.PREAIR.DVDRip.XviD-CRX - CT -">The.Big.Bang.Theory.S01E01.PREAIR.DVDRip.XviD-CRX - CT -</a>
+</td>
+<td>07-27&nbsp;2007</td>
+<td><nobr><a href="magnet:?xt=urn:btih:987f65b9a874489c004d51a49550e72cf32cfcfc&dn=The.Big.Bang.Theory.S01E01.PREAIR.DVDRip.XviD-CRX+-+CT+-&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 5 comments." title="This torrent has 5 comments." /></nobr></td>
+<td align="right">233.12&nbsp;MiB</td>
+<td align="right">68</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/4127862/The_Big_Bang_Theory_S01E01_SWESUB_HDTV_XviD_-_d_S.avi" title="Details for The Big Bang Theory S01E01 SWESUB HDTV XviD - d_S.avi">The Big Bang Theory S01E01 SWESUB HDTV XviD - d_S.avi</a>
+</td>
+<td>04-11&nbsp;2008</td>
+<td><nobr><a href="magnet:?xt=urn:btih:b8f73f2ac6cb391949861f460ec9ada6d3cf33ad&dn=The+Big+Bang+Theory+S01E01+SWESUB+HDTV+XviD+-+d_S.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a></nobr></td>
+<td align="right">174.8&nbsp;MiB</td>
+<td align="right">15</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/7056101/The_Big_Bang_Theory_HD_-_S01E01_through_S05E18_-_720p_-_Encoded_" title="Details for The Big Bang Theory HD - S01E01 through S05E18 - 720p - Encoded ">The Big Bang Theory HD - S01E01 through S05E18 - 720p - Encoded </a>
+</td>
+<td>02-24&nbsp;2012</td>
+<td><nobr><a href="magnet:?xt=urn:btih:58545a02c75972608544caa2418c221434344809&dn=The+Big+Bang+Theory+HD+-+S01E01+through+S05E18+-+720p+-+Encoded+&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 13 comments." title="This torrent has 13 comments." /></nobr></td>
+<td align="right">64.4&nbsp;GiB</td>
+<td align="right">13</td>
+<td align="right">52</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/5241579/The.Big.Bang.Theory.S01E01.NORSUB.HDTV.XviD-Ratchet.avi" title="Details for The.Big.Bang.Theory.S01E01.NORSUB.HDTV.XviD-Ratchet.avi">The.Big.Bang.Theory.S01E01.NORSUB.HDTV.XviD-Ratchet.avi</a>
+</td>
+<td>12-25&nbsp;2009</td>
+<td><nobr><a href="magnet:?xt=urn:btih:f6827d0a87a7fb461b3ffe102452272b8179cf01&dn=The.Big.Bang.Theory.S01E01.NORSUB.HDTV.XviD-Ratchet.avi&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/5241579/The.Big.Bang.Theory.S01E01.NORSUB.HDTV.XviD-Ratchet.avi.5241579.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /><a href="/user/Ratchet93"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border='0' /></a></nobr></td>
+<td align="right">173.88&nbsp;MiB</td>
+<td align="right">9</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/6124682/The_Big_Bang_Theory_S01E01_-_Pilot.avi_Telnet" title="Details for The Big Bang Theory S01E01 - Pilot.avi Telnet">The Big Bang Theory S01E01 - Pilot.avi Telnet</a>
+</td>
+<td>01-24&nbsp;2011</td>
+<td><nobr><a href="magnet:?xt=urn:btih:326e6745613d48645d17de04a401a5fb87278580&dn=The+Big+Bang+Theory+S01E01+-+Pilot.avi+Telnet&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/6124682/The_Big_Bang_Theory_S01E01_-_Pilot.avi_Telnet.6124682.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /></nobr></td>
+<td align="right">260.34&nbsp;MiB</td>
+<td align="right">3</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/207" title="More from this category">Video &gt; HD - Movies</a></td>
+<td><a href="/torrent/8866554/The.Big.Bang.Theory.2007.S01E01-E17.x264.DTS-WAF" title="Details for The.Big.Bang.Theory.2007.S01E01-E17.x264.DTS-WAF">The.Big.Bang.Theory.2007.S01E01-E17.x264.DTS-WAF</a>
+</td>
+<td>08-31&nbsp;2013</td>
+<td><nobr><a href="magnet:?xt=urn:btih:6eb95b1b2814b85944e920e84a39e2e13b73ccb5&dn=The.Big.Bang.Theory.2007.S01E01-E17.x264.DTS-WAF&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/8866554/The.Big.Bang.Theory.2007.S01E01-E17.x264.DTS-WAF.8866554.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /><a href="/user/sadbawang"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a></nobr></td>
+<td align="right">8.34&nbsp;GiB</td>
+<td align="right">3</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/8747944/The_Big_Bang_Theory_S01E01-E17_Sub_Es_HD_Audio_5.1" title="Details for The Big Bang Theory S01E01-E17 Sub Es HD Audio 5.1">The Big Bang Theory S01E01-E17 Sub Es HD Audio 5.1</a>
+</td>
+<td>07-28&nbsp;2013</td>
+<td><nobr><a href="magnet:?xt=urn:btih:e08c5ada695f144359bfbabf46b224da9598f700&dn=The+Big+Bang+Theory+S01E01-E17+Sub+Es+HD+Audio+5.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/8747944/The_Big_Bang_Theory_S01E01-E17_Sub_Es_HD_Audio_5.1.8747944.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /></nobr></td>
+<td align="right">22.47&nbsp;GiB</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/6687744/The_Big_Bang_Theory_S01E01_-_Arnarcool_" title="Details for The Big Bang Theory S01E01 - Arnarcool ">The Big Bang Theory S01E01 - Arnarcool </a>
+</td>
+<td>09-19&nbsp;2011</td>
+<td><nobr><a href="magnet:?xt=urn:btih:69becc71c71e822b07f5da436bca1616ad585de1&dn=The+Big+Bang+Theory+S01E01+-+Arnarcool+&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/6687744/The_Big_Bang_Theory_S01E01_-_Arnarcool_.6687744.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /><a href="/user/TvFreak"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border='0' /></a></nobr></td>
+<td align="right">97.74&nbsp;MiB</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/3860048/The.Big.Bang.Theory.S01E01-04.720p.HDTV.x264_bbs.99hifi.com" title="Details for The.Big.Bang.Theory.S01E01-04.720p.HDTV.x264@bbs.99hifi.com">The.Big.Bang.Theory.S01E01-04.720p.HDTV.x264@bbs.99hifi.com</a>
+</td>
+<td>10-26&nbsp;2007</td>
+<td><nobr><a href="magnet:?xt=urn:btih:1c3b3fab5d06dd2963da20e08f0060b96d335000&dn=The.Big.Bang.Theory.S01E01-04.720p.HDTV.x264%40bbs.99hifi.com&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/3860048/The.Big.Bang.Theory.S01E01-04.720p.HDTV.x264_bbs.99hifi.com.3860048.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><a href="/user/kuge6206"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border='0' /></a></nobr></td>
+<td align="right">2.15&nbsp;GiB</td>
+<td align="right">0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/7736183/The_Big_Bang_Theory_-_S01E01_480p_65MB_HDTV-x264[VectoR]" title="Details for The Big Bang Theory - S01E01 480p 65MB HDTV-x264[VectoR]">The Big Bang Theory - S01E01 480p 65MB HDTV-x264[VectoR]</a>
+</td>
+<td>10-17&nbsp;2012</td>
+<td><nobr><a href="magnet:?xt=urn:btih:3b170e41a1a9ca71fcbce344bb412dc53d7cafc0&dn=The+Big+Bang+Theory+-+S01E01+480p+65MB+HDTV-x264%5BVectoR%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/7736183/The_Big_Bang_Theory_-_S01E01_480p_65MB_HDTV-x264[VectoR].7736183.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a></nobr></td>
+<td align="right">64.47&nbsp;MiB</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/205" title="More from this category">Video &gt; TV shows</a></td>
+<td><a href="/torrent/5669502/The.Big.Bang.Theory.S01E01-08.SWESUB.DVDRip.XviD-Sniff" title="Details for The.Big.Bang.Theory.S01E01-08.SWESUB.DVDRip.XviD-Sniff">The.Big.Bang.Theory.S01E01-08.SWESUB.DVDRip.XviD-Sniff</a>
+</td>
+<td>07-05&nbsp;2010</td>
+<td><nobr><a href="magnet:?xt=urn:btih:b1744b27c91cc78a627e58130a1da771eac1f0ec&dn=The.Big.Bang.Theory.S01E01-08.SWESUB.DVDRip.XviD-Sniff&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/5669502/The.Big.Bang.Theory.S01E01-08.SWESUB.DVDRip.XviD-Sniff.5669502.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a></nobr></td>
+<td align="right">1.35&nbsp;GiB</td>
+<td align="right">0</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/7639683/The_Big_Bang_Theory_S01E01-E17_Sub_esp_HD_Audio_5.1" title="Details for The Big Bang Theory S01E01-E17 Sub esp HD Audio 5.1">The Big Bang Theory S01E01-E17 Sub esp HD Audio 5.1</a>
+</td>
+<td>09-15&nbsp;2012</td>
+<td><nobr><a href="magnet:?xt=urn:btih:c9c6f49f755aefa1a92f0509f1f63e4b615b4d4f&dn=The+Big+Bang+Theory+S01E01-E17+Sub+esp+HD+Audio+5.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/7639683/The_Big_Bang_Theory_S01E01-E17_Sub_esp_HD_Audio_5.1.7639683.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /></nobr></td>
+<td align="right">37.41&nbsp;GiB</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/7636658/The_Big_Bang_Theory_S01E01-E17" title="Details for The Big Bang Theory S01E01-E17">The Big Bang Theory S01E01-E17</a>
+</td>
+<td>09-14&nbsp;2012</td>
+<td><nobr><a href="magnet:?xt=urn:btih:d4f4115b39ac805e1b90a8ae31ff4c125859d884&dn=The+Big+Bang+Theory+S01E01-E17&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/7636658/The_Big_Bang_Theory_S01E01-E17.7636658.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /></nobr></td>
+<td align="right">37.41&nbsp;GiB</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td class="vertTh"><a href="/browse/208" title="More from this category">Video &gt; HD - TV shows</a></td>
+<td><a href="/torrent/7648890/The_Big_Bang_Theory_S01E01-E017___S02E01-E23_Sub_esp_HD_Audio_5." title="Details for The Big Bang Theory S01E01-E017 + S02E01-E23 Sub esp HD Audio 5.">The Big Bang Theory S01E01-E017 + S02E01-E23 Sub esp HD Audio 5.</a>
+</td>
+<td>09-18&nbsp;2012</td>
+<td><nobr><a href="magnet:?xt=urn:btih:2b9bd8ed36d9573ce1df6f47a31eb077ba8dac0d&dn=The+Big+Bang+Theory+S01E01-E017+%2B+S02E01-E23+Sub+esp+HD+Audio+5.&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="//torrents.thepiratebay.se/7648890/The_Big_Bang_Theory_S01E01-E017___S02E01-E23_Sub_esp_HD_Audio_5..7648890.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image" /></nobr></td>
+<td align="right">90.25&nbsp;GiB</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+
+</table></div>
+<div align="center"></div>
+            <div class="ads" id="sky-banner">
+            </div>
+    </div></div></div><!-- //div:content -->
+
+    <div id="foot" style="text-align:center;margin-top:1em;">
+                <p>
+            <a href="/login" title="Login">Login</a> | 
+            <a href="/register" title="Register">Register</a> | 
+            <a href="/language" title="Select language">Language / Select language</a> |
+            <a href="/about" title="About">About</a> |
+            <a href="/legal" title="Legal threats">Legal threats</a> |
+            <a href="/blog" title="Blog">Blog</a>
+            <br />
+            <a href="/contact" title="Contact us">Contact us</a> |
+            <a href="/policy" title="Usage policy">Usage policy</a> |
+            <a href="/downloads" title="Downloads">Downloads</a> |
+            <a href="http://www.promobay.org/" title="Promo" target="_NEW">Promo</a> |
+            <a href="/doodles" title="Doodles">Doodles</a> |
+            <a href="/tags" title="Tag Cloud">Tag Cloud</a> |
+            <a href="http://suprbay.org/" title="Forum" target="_blank">Forum</a> |
+            <a href="http://piratebrowser.com/" title="PirateBrowser" target="_blank"><strong>PirateBrowser</strong></a>
+            <br />
+            <a href="http://bayfiles.net" title="Bayfiles" target="_blank">Bayfiles</a> |
+            <a href="http://bayimg.com" title="BayImg" target="_blank">BayImg</a> |
+            <a href="http://pastebay.net" title="PasteBay" target="_blank">PasteBay</a> |
+            <a href="http://uberproxy.net" title="Proxy" target="_blank">Proxy</a> |
+            <a href="https://twitter.com/tpbdotorg" title="Twitter" target="_blank">Follow TPB on Twitter</a> |
+            <a href="https://www.facebook.com/ThePirateBayWarMachine" title="Facebook" target="_blank">Follow TPB on Facebook</a>
+            <br />
+        </p>
+
+        <div id="fbanners">
+            <a href="/rss" class="rss" title="RSS"><img src="/static/img/rss_small.gif" alt="RSS" /></a>
+        </div><!-- // div:fbanners -->
+    </div><!-- // div:foot -->
+<script type="text/javascript" src="/static/js/poptest.js"></script></body>
+</html>

@@ -1,15 +1,17 @@
 var assert = require('assert'),
     parser = require('../lib/parser'),
-    HTML = require('./resource');
+    readFile = require('./support/readfile');
 
 
 describe('HTML parser', function() {
-    var p = new parser(HTML);
+    var file = __dirname + '/fixtures/thepiratebay.html',
+        HTML = readFile(file),
+        p = new parser(HTML);
 
     describe('list', function() {
-        it('should have 16 rows', function() {
+        it('should have 14 rows', function() {
             var a = p.parse()
-            assert.equal(16, p.data.length);
+            assert.equal(14, p.data.length);
         })
     })
 })
