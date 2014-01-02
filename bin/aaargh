@@ -2,15 +2,17 @@
 
 var docopt = require('docopt').docopt,
     pkg = require('../package.json'),
-    config = require('../config.json'),
+    config = require('../lib/config'),
     server = require('../lib/server');
 
-
-// Usage text
+/*
+    Docstring
+*/
 var doc = "I feel lucky, for The Pirate Bay   \n\
 \n\
 Usage:   \n\
-    aaargh [--host=HOST] [--port=PORT] [--source=URL]   \n\
+    aaargh [<config>]   \n\
+    aaargh [options]   \n\
 \n\
 Options:   \n\
     --host=HOST       Set server host   \n\
@@ -18,17 +20,33 @@ Options:   \n\
     --source=URL      Set The Pirate Bay URL   \n\
     -h --help         Show this screen   \n\
     -v --version      Show version   \n\
+\n\
+Examples:   \n\
+       aaargh (run the server with default config)   \n\
+       aaargh ~/config.json   \n\
+       aaargh --host localhost --port 8080   \n\
 ";
 
 var cli = docopt(doc, { version: pkg.version });
 
-// Load config
-var port = cli['--port'] || config.server.port,
-    host = cli['--host'] || config.server.host,
-    source = cli['--source'] || config.tpb.url;
+/*
+    Load config
+*/
+if (cli['<config>']) {
+    // from file...
+    config.load(cli['<config>']);
+}
+else {
+    // from arguments...
+    config.set('host', cli['--host']);
+    config.set('port', cli['--port']);
+    config.set('source', cli['--source']);
+}
 
-// Set TPB URL
-server.setTPB(source);
+/*
+    Set TPB URL and
+    start HTTP server
+*/
+server.setTPB(config.source);
 
-// Start HTTP server
-server.start(port, host);
+server.start(config.port, config.host);
