@@ -1,18 +1,18 @@
 {
-    "name": "Aaargh!",
+    "name": "Yarr!",
     "description": "I feel lucky, for The Pirate Bay.",
     "author": "<hello@mikelaew.com>",
     "version": "0.0.1",
     "license": "MIT",
     "private": true,
 
-    "homepage": "https://github.com/mikelaew/aaargh/",
+    "homepage": "https://github.com/mikelaew/yarr/",
     "repository": {
         "type": "git",
-        "url": "git://github.com/mikelaew/aaargh.git"
+        "url": "git://github.com/mikelaew/yarr.git"
     },
     "bugs": {
-        "url": "https://github.com/mikelaew/aaargh/issues"
+        "url": "https://github.com/mikelaew/yarr/issues"
     },
 
     "main": "index",
@@ -26,7 +26,7 @@
         "mocha": "1.16.x"
     },
     "bin": {
-        "aaargh": "./bin/aaargh"
+        "yarr": "./bin/yarr"
     },
     "scripts": {
         "test": "make test"

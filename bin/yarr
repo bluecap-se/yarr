@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 
-var docopt = require('docopt').docopt,
+var path = require('path'),
+    docopt = require('docopt').docopt,
     pkg = require('../package.json'),
     config = require('../lib/config'),
     server = require('../lib/server');
 
+
 /*
     Docstring
 */
-var doc = "I feel lucky, for The Pirate Bay   \n\
+var file = __filename.split(path.sep).slice(-1)[0],
+    doc = "I feel lucky, for The Pirate Bay   \n\
 \n\
 Usage:   \n\
-    aaargh [<config>]   \n\
-    aaargh [options]   \n\
+    %file [<config>]   \n\
+    %file [options]   \n\
 \n\
 Options:   \n\
     --host=HOST       Set server host   \n\
@@ -22,10 +25,11 @@ Options:   \n\
     -v --version      Show version   \n\
 \n\
 Examples:   \n\
-       aaargh (run the server with default config)   \n\
-       aaargh ~/config.json   \n\
-       aaargh --host localhost --port 8080   \n\
-";
+       %file (run the server with default config)   \n\
+       %file ~/config.json   \n\
+       %file --host localhost --port 8080   \n\
+\
+".replace(/\%file/g, file);
 
 var cli = docopt(doc, { version: pkg.version });
 
