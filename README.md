@@ -6,12 +6,12 @@ for picking the best torrent available for download, by searching TPB.
 ## Install
 
 ```
-$ git clone https://github.com/mikelaew/yarr.git .`
+$ git clone https://github.com/mikelaew/yarr.git .
 $ cd yarr
 $ npm install
 ```
 
-## Use
+## Usage
 
 ```
 $ bin/yarr -h
