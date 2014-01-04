@@ -21,6 +21,7 @@ Options:   \n\
     --host=HOST       Set server host   \n\
     --port=PORT       Set server port   \n\
     --source=URL      Set The Pirate Bay URL   \n\
+    --api-key=TOKEN   Set API-key   \n\
     -h --help         Show this screen   \n\
     -v --version      Show version   \n\
 \n\
@@ -44,6 +45,7 @@ else {
     // from arguments...
     config.set('host', cli['--host']);
     config.set('port', cli['--port']);
+    config.set('apiKey', cli['--api-key']);
     config.set('source', cli['--source']);
 }
 
@@ -51,6 +53,6 @@ else {
     Set TPB URL and
     start HTTP server
 */
-server.setTPB(config.source);
+server.set(config);
 
 server.start(config.port, config.host);
