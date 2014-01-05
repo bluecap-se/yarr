@@ -8,8 +8,9 @@ var path = require('path'),
 
 
 /*
-    Docstring
-*/
+ * Docstring
+ */
+
 var file = __filename.split(path.sep).slice(-1)[0],
     doc = "I feel lucky, for The Pirate Bay   \n\
 \n\
@@ -34,9 +35,11 @@ Examples:   \n\
 
 var cli = docopt(doc, { version: pkg.version });
 
+
 /*
-    Load config
-*/
+ * Load config
+ */
+
 if (cli['<config>']) {
     // from file...
     config.load(cli['<config>']);
@@ -49,10 +52,9 @@ else {
     config.set('source', cli['--source']);
 }
 
-/*
-    Set TPB URL and
-    start HTTP server
-*/
-server.set(config);
 
-server.start(config.port, config.host);
+/*
+ * Start HTTP server
+ */
+
+server.start();
