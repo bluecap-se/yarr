@@ -24,6 +24,7 @@
     },
     "devDependencies": {
         "supertest": "0.8.x",
+        "istanbul": "0.2.x",
         "mocha": "1.16.x",
         "chai": "1.8.x"
     },
