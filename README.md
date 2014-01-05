@@ -53,11 +53,44 @@ Examples:
 
 All response is JSON formatted.
 
-**Make a search**  
+**Perform a search**  
 Returned is the best matching torrent.
 
+<table>
+    <tr>
+        <th>Param</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Input type</th>
+    </tr>
+    <tr>
+        <td>q</td>
+        <td>Yes</td>
+        <td>Search query.</td>
+        <td>Freetext string</td>
+    </tr>
+    <tr>
+        <td>s</td>
+        <td>No</td>
+        <td>Season, for shows.</td>
+        <td>Number</td>
+    </tr>
+    <tr>
+        <td>e</td>
+        <td>No</td>
+        <td>Episode, for shows. Requires season.</td>
+        <td>Number</td>
+    </tr>
+    <tr>
+        <td>hd</td>
+        <td>No</td>
+        <td>Flag for HD.</td>
+        <td>720p, 1080p</td>
+    </tr>
+</table>
+
 ```Bash
-$ curl http://localhost:8080/search?q=Game
+$ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
 {
     "name": ""
 }
