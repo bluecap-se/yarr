@@ -92,7 +92,12 @@ Returned is the best matching torrent.
 ```Bash
 $ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
 {
-    "name": ""
+    "name": "...",
+    "added": "05-16 2011",
+    "magnet": "magnet:...",
+    "size": "1.46 GiB",
+    "seeders": "69",
+    "leachers": "10"
 }
 ```
 
