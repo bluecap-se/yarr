@@ -19,7 +19,7 @@
     "dependencies": {
         "express": "3.4.7",
         "request": "2.30.0",
-        "cheerio": "0.12.4",
+        "cheerio": "0.13.0",
         "docopt": "0.4.0"
     },
     "devDependencies": {
