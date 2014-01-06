@@ -1,5 +1,8 @@
 # Yarr!
 
+[![Build Status](https://travis-ci.org/mikelaew/yarr.png?branch=develop,master)](https://travis-ci.org/mikelaew/yarr)
+[![Dependency Status](https://gemnasium.com/mikelaew/yarr.png)](https://gemnasium.com/mikelaew/yarr)
+
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
 
