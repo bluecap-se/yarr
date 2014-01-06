@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+
+var path = require('path'),
+    docopt = require('docopt').docopt,
+    pkg = require('../package.json'),
+    config = require('../lib/config'),
+    server = require('../lib/server');
+
+
+/*
+ * Docstring
+ */
+
+var file = __filename.split(path.sep).slice(-1)[0],
+    doc = "I feel lucky, for The Pirate Bay   \n\
+\n\
+Usage:   \n\
+    %file [<config>]   \n\
+    %file [options]   \n\
+\n\
+Options:   \n\
+    --host=HOST       Set server host   \n\
+    --port=PORT       Set server port   \n\
+    --source=URL      Set The Pirate Bay URL   \n\
+    --api-key=TOKEN   Set API-key   \n\
+    -h --help         Show this screen   \n\
+    -v --version      Show version   \n\
+\n\
+Examples:   \n\
+       %file (run the server with default config)   \n\
+       %file ~/config.json   \n\
+       %file --host localhost --port 8080   \n\
+\
+".replace(/\%file/g, file);
+
+var cli = docopt(doc, { version: pkg.version });
+
+
+/*
+ * Load config
+ */
+
+if (cli['<config>']) {
+    // from file...
+    config.load(cli['<config>']);
+}
+else {
+    // from arguments...
+    config.set('host', cli['--host']);
+    config.set('port', cli['--port']);
+    config.set('apiKey', cli['--api-key']);
+    config.set('source', cli['--source']);
+}
+
+
+/*
+ * Start HTTP server
+ */
+
+server.start();

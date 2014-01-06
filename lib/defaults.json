@@ -1,0 +1,28 @@
+{
+    "server": {
+        "host": "localhost",
+        "port": 8080,
+        "apiKey": ""
+    },
+
+    "tpb": {
+        "url": "https://thepiratebay.se",
+
+        "categories": {
+            "all": 0,
+            "audio": 100,
+            "video": 200,
+            "applications": 300,
+            "games": 400,
+            "porn": 500,
+            "other": {
+                "ebooks": 601,
+                "comics": 602,
+                "pictures": 603,
+                "covers": 604,
+                "physibles": 605,
+                "other": 699
+            }
+        }
+    }
+}

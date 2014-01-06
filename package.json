@@ -1,0 +1,40 @@
+{
+    "name": "Yarr!",
+    "description": "I feel lucky, for The Pirate Bay.",
+    "author": "<hello@mikelaew.com>",
+    "version": "1.0.0",
+    "license": "MIT",
+    "private": true,
+
+    "homepage": "https://github.com/mikelaew/yarr/",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mikelaew/yarr.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mikelaew/yarr/issues"
+    },
+
+    "main": "index",
+    "dependencies": {
+        "express": "3.4.7",
+        "request": "2.30.0",
+        "cheerio": "0.13.0",
+        "docopt": "0.4.0"
+    },
+    "devDependencies": {
+        "supertest": "0.8.x",
+        "istanbul": "0.2.x",
+        "mocha": "1.16.x",
+        "chai": "1.8.x"
+    },
+    "bin": {
+        "yarr": "./bin/yarr"
+    },
+    "scripts": {
+        "test": "make test"
+    },
+    "engines": {
+        "node": ">= 0.8.0"
+    }
+}
