@@ -23,7 +23,7 @@ $ bin/yarr
 Server started on localhost:8080
 ```
 
-This will start the HTTP server, with [default config](https://github.com/mikelaew/yarr/blob/develop/lib/defaults.json).
+This will start the HTTP server, with [default config](https://github.com/mikelaew/yarr/blob/master/lib/defaults.json).
 Then navigate to [localhost:8080](http://localhost:8080)
 
 #### Full options
@@ -123,4 +123,4 @@ $ make test
 
 ## License
 
-Published under MIT license.
+Published under [MIT License](https://github.com/mikelaew/yarr/blob/master/LICENSE).
