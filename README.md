@@ -110,7 +110,7 @@ Returned is the running version of Yarr!
 ```Bash
 $ curl http://localhost:8080/version
 {
-    "version": "0.0.1"
+    "version": "1.0.0"
 }
 ```
 
