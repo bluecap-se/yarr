@@ -4,7 +4,7 @@
     "author": "<hello@bluecap.se>",
     "version": "1.0.0",
     "license": "MIT",
-    "private": true,
+    "private": false,
 
     "homepage": "https://github.com/bluecap-se/yarr/",
     "repository": {
