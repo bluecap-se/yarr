@@ -1,18 +1,18 @@
 {
     "name": "Yarr!",
     "description": "I feel lucky, for The Pirate Bay.",
-    "author": "<hello@mikelaew.com>",
+    "author": "<hello@bluecap.se>",
     "version": "1.0.0",
     "license": "MIT",
     "private": true,
 
-    "homepage": "https://github.com/mikelaew/yarr/",
+    "homepage": "https://github.com/bluecap-se/yarr/",
     "repository": {
         "type": "git",
-        "url": "git://github.com/mikelaew/yarr.git"
+        "url": "git://github.com/bluecap-se/yarr.git"
     },
     "bugs": {
-        "url": "https://github.com/mikelaew/yarr/issues"
+        "url": "https://github.com/bluecap-se/yarr/issues"
     },
 
     "main": "index",

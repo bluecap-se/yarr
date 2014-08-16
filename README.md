@@ -1,7 +1,7 @@
 # Yarr!
 
-[![Build Status](https://travis-ci.org/mikelaew/yarr.png?branch=develop,master)](https://travis-ci.org/mikelaew/yarr)
-[![Dependency Status](https://gemnasium.com/mikelaew/yarr.png)](https://gemnasium.com/mikelaew/yarr)
+[![Build Status](https://travis-ci.org/bluecap-se/yarr.svg?branch=master)](https://travis-ci.org/bluecap-se/yarr)
+[![Dependency Status](https://gemnasium.com/bluecap-se/yarr.png)](https://gemnasium.com/bluecap-se/yarr)
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
@@ -9,8 +9,8 @@ for picking the best torrent available for download, by searching TPB.
 
 ## Install
 
-```Bash
-$ git clone https://github.com/mikelaew/yarr.git .
+```console
+$ git clone https://github.com/bluecap-se/yarr.git .
 $ cd yarr
 $ npm install
 ```
@@ -18,17 +18,18 @@ $ npm install
 
 ## Usage
 
-```Bash
+```console
 $ bin/yarr
+
 Server started on localhost:8080
 ```
 
-This will start the HTTP server, with [default config](https://github.com/mikelaew/yarr/blob/master/lib/defaults.json).
+This will start the HTTP server, with [default config](https://github.com/bluecap-se/yarr/blob/master/lib/defaults.json).
 Then navigate to [localhost:8080](http://localhost:8080)
 
 #### Full options
 
-```Bash
+```console
 $ bin/yarr -h
 
 I feel lucky, for The Pirate Bay
@@ -92,8 +93,9 @@ Returned is the best matching torrent.
     </tr>
 </table>
 
-```Bash
+```console
 $ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
+
 {
     "name": "...",
     "added": "05-16 2011",
@@ -107,8 +109,9 @@ $ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
 **Check version**  
 Returned is the running version of Yarr!
 
-```Bash
+```console
 $ curl http://localhost:8080/version
+
 {
     "version": "1.0.0"
 }
@@ -116,11 +119,11 @@ $ curl http://localhost:8080/version
 
 ## Run tests
 
-```Bash
+```console
 $ make test
 ```
 
 
 ## License
 
-Published under [MIT License](https://github.com/mikelaew/yarr/blob/master/LICENSE).
+Published under [MIT License](https://github.com/bluecap-se/yarr/blob/master/LICENSE).
