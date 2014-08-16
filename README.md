@@ -9,15 +9,13 @@ for picking the best torrent available for download, by searching TPB.
 ## Install
 
 ```console
-$ git clone https://github.com/bluecap-se/yarr.git .
-$ cd yarr
-$ npm install
+$ npm install yarr
 ```
 
 ## Usage
 
 ```console
-$ bin/yarr
+$ yarr
 Server started on localhost:8080
 ```
 
@@ -124,7 +122,7 @@ $ http localhost:8080/search q==value [param==value]
 Returned is the running version of Yarr!
 
 ```console
-$ curl http://localhost:8080/version
+$ http localhost:8080/version
 {
     "version": "1.0.0"
 }
