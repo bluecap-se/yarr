@@ -1,32 +1,32 @@
 {
     "name": "Yarr!",
     "description": "I feel lucky, for The Pirate Bay.",
-    "author": "<hello@mikelaew.com>",
-    "version": "1.0.0",
+    "author": "<hello@bluecap.se>",
+    "version": "1.0.1",
     "license": "MIT",
-    "private": true,
+    "private": false,
 
-    "homepage": "https://github.com/mikelaew/yarr/",
+    "homepage": "https://github.com/bluecap-se/yarr/",
     "repository": {
         "type": "git",
-        "url": "git://github.com/mikelaew/yarr.git"
+        "url": "git://github.com/bluecap-se/yarr.git"
     },
     "bugs": {
-        "url": "https://github.com/mikelaew/yarr/issues"
+        "url": "https://github.com/bluecap-se/yarr/issues"
     },
 
     "main": "index",
     "dependencies": {
-        "express": "3.4.7",
-        "request": "2.30.0",
-        "cheerio": "0.13.0",
+        "express": "4.8.4",
+        "request": "2.40.0",
+        "cheerio": "0.17.0",
         "docopt": "0.4.0"
     },
     "devDependencies": {
-        "supertest": "0.8.x",
-        "istanbul": "0.2.x",
-        "mocha": "1.16.x",
-        "chai": "1.8.x"
+        "supertest": "0.13.x",
+        "istanbul": "0.3.x",
+        "mocha": "1.21.x",
+        "chai": "1.9.x"
     },
     "bin": {
         "yarr": "./bin/yarr"

@@ -1,34 +1,30 @@
 # Yarr!
 
-[![Build Status](https://travis-ci.org/mikelaew/yarr.png?branch=develop,master)](https://travis-ci.org/mikelaew/yarr)
-[![Dependency Status](https://gemnasium.com/mikelaew/yarr.png)](https://gemnasium.com/mikelaew/yarr)
+[![Build Status](https://travis-ci.org/bluecap-se/yarr.svg?branch=master)](https://travis-ci.org/bluecap-se/yarr)
+[![Dependency Status](https://gemnasium.com/bluecap-se/yarr.png)](https://gemnasium.com/bluecap-se/yarr)
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
 
-
 ## Install
 
-```Bash
-$ git clone https://github.com/mikelaew/yarr.git .
-$ cd yarr
-$ npm install
+```console
+$ npm install yarr
 ```
-
 
 ## Usage
 
-```Bash
-$ bin/yarr
+```console
+$ yarr
 Server started on localhost:8080
 ```
 
-This will start the HTTP server, with [default config](https://github.com/mikelaew/yarr/blob/develop/lib/defaults.json).
+This will start the HTTP server, with [default config](https://github.com/bluecap-se/yarr/blob/master/lib/defaults.json).
 Then navigate to [localhost:8080](http://localhost:8080)
 
 #### Full options
 
-```Bash
+```console
 $ bin/yarr -h
 
 I feel lucky, for The Pirate Bay
@@ -51,13 +47,43 @@ Examples:
        yarr --host localhost --port 8080
 ```
 
+## Use case
+
+#### Getting the best torrent
+
+Here, [HTTPie](https://github.com/jakubroztocil/httpie) is used when calling the API over HTTP. Using Curl is another option.
+
+```console
+$ http localhost:8080/search q==Game s==1 e==5 hd==720p
+{
+    "name": "...",
+    "added": "05-16 2011",
+    "magnet": "magnet:?xt=urn:...",
+    "size": "1.46 GiB",
+    "seeders": "69",
+    "leachers": "10"
+}
+```
+
+#### Getting the magnet
+
+Here, [jq](http://stedolan.github.io/jq/) is used to parse the result from Yarr!. The result can then be piped to a torrent application of your choice.
+
+```console
+$ http localhost:8080/search q==Game s==1 e==5 hd==720p | jq .magnet
+magnet:?xt=urn:
+```
 
 ## API
 
 All response is JSON formatted.
 
-**Perform a search**  
+#### Perform a search
 Returned is the best matching torrent.
+
+```console
+$ http localhost:8080/search q==value [param==value]
+```
 
 <table>
     <tr>
@@ -92,35 +118,22 @@ Returned is the best matching torrent.
     </tr>
 </table>
 
-```Bash
-$ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
-{
-    "name": "...",
-    "added": "05-16 2011",
-    "magnet": "magnet:...",
-    "size": "1.46 GiB",
-    "seeders": "69",
-    "leachers": "10"
-}
-```
-
-**Check version**  
+#### Check version
 Returned is the running version of Yarr!
 
-```Bash
-$ curl http://localhost:8080/version
+```console
+$ http localhost:8080/version
 {
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
 ```
 
 ## Run tests
 
-```Bash
+```console
 $ make test
 ```
 
-
 ## License
 
-Published under MIT license.
+Published under [MIT License](https://github.com/bluecap-se/yarr/blob/master/LICENSE).
