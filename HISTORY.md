@@ -1,7 +1,11 @@
 # Changelog
 
 
-## 1.0.1
+## Minor: 1.0.2
+
+- NPM publishing tweaks
+
+## Minor: 1.0.1
 
 - Repo renaming
 
