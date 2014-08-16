@@ -6,7 +6,6 @@
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
 
-
 ## Install
 
 ```console
@@ -15,12 +14,10 @@ $ cd yarr
 $ npm install
 ```
 
-
 ## Usage
 
 ```console
 $ bin/yarr
-
 Server started on localhost:8080
 ```
 
@@ -52,13 +49,43 @@ Examples:
        yarr --host localhost --port 8080
 ```
 
+## Use case
+
+#### Getting the best torrent
+
+Here, [HTTPie](https://github.com/jakubroztocil/httpie) is used when calling the API over HTTP. Using Curl is another option.
+
+```console
+$ http localhost:8080/search q==Game s==1 e==5 hd==720p
+{
+    "name": "...",
+    "added": "05-16 2011",
+    "magnet": "magnet:?xt=urn:...",
+    "size": "1.46 GiB",
+    "seeders": "69",
+    "leachers": "10"
+}
+```
+
+#### Getting the magnet
+
+Here, [jq](http://stedolan.github.io/jq/) is used to parse the result from Yarr!. The result can then be piped to a torrent application of your choice.
+
+```console
+$ http localhost:8080/search q==Game s==1 e==5 hd==720p | jq .magnet
+magnet:?xt=urn:
+```
 
 ## API
 
 All response is JSON formatted.
 
-**Perform a search**  
+#### Perform a search
 Returned is the best matching torrent.
+
+```console
+$ http localhost:8080/search q==value [param==value]
+```
 
 <table>
     <tr>
@@ -93,25 +120,11 @@ Returned is the best matching torrent.
     </tr>
 </table>
 
-```console
-$ curl 'http://localhost:8080/search?q=Game&s=1&e=5&hd=720p'
-
-{
-    "name": "...",
-    "added": "05-16 2011",
-    "magnet": "magnet:...",
-    "size": "1.46 GiB",
-    "seeders": "69",
-    "leachers": "10"
-}
-```
-
-**Check version**  
+#### Check version
 Returned is the running version of Yarr!
 
 ```console
 $ curl http://localhost:8080/version
-
 {
     "version": "1.0.0"
 }
@@ -122,7 +135,6 @@ $ curl http://localhost:8080/version
 ```console
 $ make test
 ```
-
 
 ## License
 
