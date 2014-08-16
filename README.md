@@ -25,7 +25,7 @@ Then navigate to [localhost:8080](http://localhost:8080)
 #### Full options
 
 ```console
-$ bin/yarr -h
+$ yarr -h
 
 I feel lucky, for The Pirate Bay
 

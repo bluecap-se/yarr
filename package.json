@@ -1,8 +1,8 @@
 {
-    "name": "Yarr!",
+    "name": "yarr",
     "description": "I feel lucky, for The Pirate Bay.",
     "author": "<hello@bluecap.se>",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "private": false,
 
