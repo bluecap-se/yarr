@@ -1,7 +1,8 @@
 # Yarr!
 
 [![Build Status](https://travis-ci.org/bluecap-se/yarr.svg?branch=master)](https://travis-ci.org/bluecap-se/yarr)
-[![Dependency Status](https://gemnasium.com/bluecap-se/yarr.png)](https://gemnasium.com/bluecap-se/yarr)
+[![Dependency Status](https://gemnasium.com/bluecap-se/yarr.svg)](https://gemnasium.com/bluecap-se/yarr)
+[![NPM version](https://badge.fury.io/js/yarr.svg)](http://badge.fury.io/js/yarr)
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
