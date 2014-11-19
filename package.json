@@ -17,16 +17,16 @@
 
     "main": "index",
     "dependencies": {
-        "express": "4.8.4",
-        "request": "2.40.0",
-        "cheerio": "0.17.0",
+        "express": "4.10.2",
+        "request": "2.48.0",
+        "cheerio": "0.18.0",
         "docopt": "0.4.0"
     },
     "devDependencies": {
-        "supertest": "0.13.x",
+        "supertest": "0.15.x",
         "istanbul": "0.3.x",
-        "mocha": "1.21.x",
-        "chai": "1.9.x"
+        "mocha": "2.0.x",
+        "chai": "1.10.x"
     },
     "bin": {
         "yarr": "./bin/yarr"
