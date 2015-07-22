@@ -12,21 +12,21 @@ describe('Server', function() {
             request(app)
                 .get('/')
                 .expect('Content-Type', /json/)
-                .end(done);
+                .expect(302, done);
         });
 
         it('on /search', function(done) {
             request(app)
-                .get('/')
+                .get('/search')
                 .expect('Content-Type', /json/)
-                .end(done);
+                .expect(400, done);
         });
 
         it('on /version', function(done) {
             request(app)
-                .get('/')
+                .get('/version')
                 .expect('Content-Type', /json/)
-                .end(done);
+                .expect(200, done);
         });
     });
 
