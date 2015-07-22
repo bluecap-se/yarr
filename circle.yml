@@ -1,3 +1,19 @@
 machine:
-  node:
-    version: 0.12.5
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t bluecap/yarr .
+
+test:
+  override:
+    - docker run --rm -it bluecap/yarr make test
+
+deployment:
+  hub:
+    branch: /.*/
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push bluecap/yarr
