@@ -3,14 +3,26 @@
 [![Circle CI](https://img.shields.io/circleci/project/bluecap-se/yarr.svg)](https://circleci.com/gh/bluecap-se/yarr)
 [![Dependency Status](https://img.shields.io/gemnasium/bluecap-se/yarr.svg)](https://gemnasium.com/bluecap-se/yarr)
 [![NPM version](https://img.shields.io/npm/v/yarr.svg)](https://www.npmjs.com/package/yarr)
+[![Docker pulls](https://img.shields.io/docker/pulls/bluecap/yarr.svg)](https://registry.hub.docker.com/u/bluecap/yarr/)
+
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
 
 ## Install
 
+Yarr! can be installed as a package either via NPM or Docker.
+
+#### Using NPM
+
 ```console
 $ npm install yarr
+```
+
+#### Using Docker
+
+```console
+$ docker pull bluecap/yarr
 ```
 
 ## Usage
