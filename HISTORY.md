@@ -1,5 +1,8 @@
 # Changelog
 
+
+## 1.1.0
+
 - Added docker
 - Changed from Travis CI to Circle CI
 

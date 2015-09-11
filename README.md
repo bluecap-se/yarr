@@ -1,9 +1,9 @@
 # Yarr!
 
-[![Circle CI](https://img.shields.io/circleci/project/bluecap-se/yarr.svg)](https://circleci.com/gh/bluecap-se/yarr)
-[![Dependency Status](https://img.shields.io/gemnasium/bluecap-se/yarr.svg)](https://gemnasium.com/bluecap-se/yarr)
-[![NPM version](https://img.shields.io/npm/v/yarr.svg)](https://www.npmjs.com/package/yarr)
-[![Docker pulls](https://img.shields.io/docker/pulls/bluecap/yarr.svg)](https://registry.hub.docker.com/u/bluecap/yarr/)
+[![Circle CI](https://img.shields.io/circleci/project/bluecap-se/yarr.svg?style=flat-square)](https://circleci.com/gh/bluecap-se/yarr)
+[![Dependency Status](https://img.shields.io/gemnasium/bluecap-se/yarr.svg?style=flat-square)](https://gemnasium.com/bluecap-se/yarr)
+[![NPM version](https://img.shields.io/npm/v/yarr.svg?style=flat-square)](https://www.npmjs.com/package/yarr)
+[![Docker pulls](https://img.shields.io/docker/pulls/bluecap/yarr.svg?style=flat-square)](https://registry.hub.docker.com/u/bluecap/yarr/)
 
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
@@ -146,7 +146,7 @@ Returned is the running version of Yarr!
 ```console
 $ http localhost:8080/version
 {
-    "version": "1.0.1"
+    "version": "1.1.0"
 }
 ```
 
