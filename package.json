@@ -2,7 +2,7 @@
     "name": "yarr",
     "description": "I feel lucky, for The Pirate Bay.",
     "author": "<hello@bluecap.se>",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "license": "MIT",
     "private": false,
     "homepage": "https://github.com/bluecap-se/yarr/",
