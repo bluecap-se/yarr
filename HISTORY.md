@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 1.1.0
+
+- Added docker
+- Changed from Travis CI to Circle CI
+
 ## Minor: 1.0.2
 
 - NPM publishing tweaks

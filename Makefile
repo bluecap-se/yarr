@@ -2,22 +2,27 @@ BIN = ./node_modules/.bin/
 MOCHA_OPTS= --check-leaks
 REPORTER = spec
 
-setup:
-	@rm -rf node_modules
-	@npm cache clean
-	@npm install
+API_KEY ?= ''
+SOURCE ?= ''
+
+setup: clean
+	npm install
+
+serve:
+	node /yarr/bin/yarr --host 0.0.0.0 --api-key $(API_KEY) --source $(SOURCE)
 
 test:
-	@NODE_ENV=test ${BIN}mocha --reporter $(REPORTER) --globals setImmediate,clearImmediate $(MOCHA_OPTS)
+	NODE_ENV=test ${BIN}mocha --reporter $(REPORTER) --globals setImmediate,clearImmediate $(MOCHA_OPTS)
 
 test-coverage:
-	@${BIN}istanbul cover ${BIN}_mocha -- -R $(REPORTER)
+	${BIN}istanbul cover ${BIN}_mocha -- -R $(REPORTER)
 
 clean:
-	@rm -rf node_modules
-	@rm -rf coverage
+	npm cache clean
+	rm -rf node_modules
+	rm -rf coverage
 
 lint:
-	@${BIN}jshint .
+	${BIN}jshint .
 
-.PHONY: setup test test-coverage clean lint
+.PHONY: setup test test-coverage clean lint serve
