@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d bluecap/yarr make test
+    - docker run --rm -it bluecap/yarr test
 
 deployment:
   hub:
