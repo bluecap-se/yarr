@@ -1,13 +1,14 @@
-FROM node
+FROM node:0.12
 
-MAINTAINER hello@bluecap.se
+MAINTAINER bluceap
 
 WORKDIR /yarr
-
-COPY . ./
-
+COPY . /yarr
 RUN make setup
+
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE  8080
 
-CMD ["yarr"]
+CMD ["serve"]
