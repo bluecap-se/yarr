@@ -63,7 +63,7 @@ Examples:
 #### Using Docker
 
 Options can be set as environment variables. Only `source` and `api-key` can be set, the rest
-can be configured by using the (port option)[https://docs.docker.com/reference/commandline/run/].
+can be configured by using the [port option](https://docs.docker.com/reference/commandline/run/).
 
 ```console
 $ docker run -d -p 80:8080 -e API_KEY='secret' -e SOURCE='http://thepiratebay.se' bluecap/yarr:latest
