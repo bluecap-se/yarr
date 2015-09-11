@@ -15,5 +15,3 @@ coverage/*
 
 npm-debug.log
 node_modules
-docker-entrypoint.sh
-circle.yml
