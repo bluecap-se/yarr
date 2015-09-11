@@ -2,8 +2,14 @@ BIN = ./node_modules/.bin/
 MOCHA_OPTS= --check-leaks
 REPORTER = spec
 
+API_KEY ?= ''
+SOURCE ?= ''
+
 setup: clean
 	npm install
+
+serve:
+	node /yarr/bin/yarr --host 0.0.0.0 --api-key $(API_KEY) --source $(SOURCE)
 
 test:
 	NODE_ENV=test ${BIN}mocha --reporter $(REPORTER) --globals setImmediate,clearImmediate $(MOCHA_OPTS)
@@ -19,4 +25,4 @@ clean:
 lint:
 	${BIN}jshint .
 
-.PHONY: setup test test-coverage clean lint
+.PHONY: setup test test-coverage clean lint serve
