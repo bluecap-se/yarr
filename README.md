@@ -1,13 +1,25 @@
 # Yarr!
 
-[![Build Status](https://travis-ci.org/bluecap-se/yarr.svg?branch=master)](https://travis-ci.org/bluecap-se/yarr)
-[![Dependency Status](https://gemnasium.com/bluecap-se/yarr.svg)](https://gemnasium.com/bluecap-se/yarr)
-[![NPM version](https://badge.fury.io/js/yarr.svg)](http://badge.fury.io/js/yarr)
+[![Circle CI](https://img.shields.io/circleci/project/bluecap-se/yarr.svg)](https://circleci.com/gh/bluecap-se/yarr)
+[![Dependency Status](https://img.shields.io/gemnasium/bluecap-se/yarr.svg)](https://gemnasium.com/bluecap-se/yarr)
+[![NPM version](https://img.shields.io/npm/v/yarr.svg)](https://www.npmjs.com/package/yarr)
+[![Docker pulls](https://img.shields.io/docker/pulls/bluecap/yarr.svg)](https://registry.hub.docker.com/u/bluecap/yarr/)
+
 
 *I feel lucky*, for [The Pirate Bay](https://thepiratebay.se/). A micro HTTP service,
 for picking the best torrent available for download, by searching TPB.
 
 ## Install
+
+Yarr! can be installed as a package either via NPM or Docker.
+
+#### Using Docker
+
+```console
+$ docker run -d -p 80:8080 bluecap/yarr:latest
+```
+
+#### Using a package manager
 
 ```console
 $ npm install yarr
@@ -23,7 +35,7 @@ Server started on localhost:8080
 This will start the HTTP server, with [default config](https://github.com/bluecap-se/yarr/blob/master/lib/defaults.json).
 Then navigate to [localhost:8080](http://localhost:8080)
 
-#### Full options
+### Full options
 
 ```console
 $ yarr -h
@@ -46,6 +58,15 @@ Examples:
        yarr (run the server with default config)
        yarr ~/config.json
        yarr --host localhost --port 8080
+```
+
+#### Using Docker
+
+Options can be set as environment variables. Only `source` and `api-key` can be set, the rest
+can be configured by using the [port option](https://docs.docker.com/reference/commandline/run/).
+
+```console
+$ docker run -d -p 80:8080 -e API_KEY='secret' -e SOURCE='http://thepiratebay.se' bluecap/yarr:latest
 ```
 
 ## Use case

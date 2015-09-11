@@ -5,7 +5,6 @@
     "version": "1.0.2",
     "license": "MIT",
     "private": false,
-
     "homepage": "https://github.com/bluecap-se/yarr/",
     "repository": {
         "type": "git",
@@ -14,19 +13,18 @@
     "bugs": {
         "url": "https://github.com/bluecap-se/yarr/issues"
     },
-
     "main": "index",
     "dependencies": {
-        "express": "4.10.2",
-        "request": "2.48.0",
-        "cheerio": "0.18.0",
-        "docopt": "0.4.0"
+        "express": "4.13.3",
+        "request": "2.61.0",
+        "cheerio": "0.19.0",
+        "docopt": "0.6.2"
     },
     "devDependencies": {
-        "supertest": "0.15.x",
+        "supertest": "1.1.x",
         "istanbul": "0.3.x",
-        "mocha": "2.0.x",
-        "chai": "1.10.x"
+        "mocha": "2.3.x",
+        "chai": "3.2.x"
     },
     "bin": {
         "yarr": "./bin/yarr"

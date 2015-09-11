@@ -1,5 +1,7 @@
 # Changelog
 
+- Added docker
+- Changed from Travis CI to Circle CI
 
 ## Minor: 1.0.2
 
